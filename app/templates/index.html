@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+    <title> {{ title }} </title>
+{% endblock %}
+
+{% block body %} 
+
+    <section class="hero is-light is-large is-bold">
+        <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+            Software resolucion Metodos Numericos 2
+            </h1>
+            <h2 class="subtitle">
+            Este software es desarrollado para la materia de metodos numericos. En el se resolveran los metodos vistos durante el curso.
+            <p>
+                Integrantes: <br>
+                Colin Hernandez R. Akzayakatl <br>
+                Cuevas Mora Cesar Ivan <br>
+                Martinez Acevedo Diego Ivan
+            </p>
+            </h2>
+        </div>
+        </div>
+    </section>
+    <section class="hero is-medium is-dark is-bold">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              Interpolación Polinomial
+            </h1>
+            <a href="/lagrange" class="button is-rounded is-large">Formula de Lagrange</a>
+            <a href="" class="button is-rounded is-large">Formula de Newton</a>
+          </div>
+        </div>
+      </section>
+      <section class="hero is-medium is-light is-bold">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              Ajuste de Curvas
+            </h1>
+            <a href="" class="button is-dark is-rounded is-large">Splines Cúbicos</a>
+          </div>
+        </div>
+      </section>
+      <section class="hero is-medium is-dark is-bold">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              Newton Cotes
+            </h1>
+            <a href="/regla-trapecio" class="button is-rounded is-large">Regla Trapezoidal</a> 
+            <a href="/simpson-tercio" class="button is-rounded is-large">Regla Simpson 1/3</a>    
+          </div>
+        </div>
+      </section>
+      <section class="hero is-medium is-light is-bold">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              Sistemas no lineales
+            </h1>
+            <a href="" class="button is-dark is-rounded is-large">Punto Fijo</a>
+          </div>
+        </div>
+      </section>
+{% endblock %}

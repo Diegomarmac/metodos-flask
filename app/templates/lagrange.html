@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+    <title> {{ title }} </title>
+{% endblock %}
+
+{% block body %} 
+<section class="hero is-light is-large is-bold">
+    <div class="hero-body">
+    <div class="container">
+        <h1 class="title">
+            Lagrange
+        </h1>
+        <form action={{url_for('resultLagrange')}}  method="post" >
+            <p>
+                <section class="hero is-warning is-bold">
+                    <div class="hero-body">
+                      <div class="container">
+                        <h1 class="title">
+                          Por motivos de practicidad, todos los datos de Lagrange se ingresan en el server, listo?
+                        </h1> 
+                      </div>
+                    </div>
+                  </section>
+            </p>
+           <input type="submit" value="listo" class="button is-dark is-rounded is-large"> 
+        </form>        
+    </div>
+    </div>
+</section>
+
+{% endblock %}
