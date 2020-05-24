@@ -1,0 +1,6 @@
+# DEPENDENCIAS
+/venv
+
+# CACHE
+
+/app/__pycache__/*
