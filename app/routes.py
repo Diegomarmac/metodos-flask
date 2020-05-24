@@ -19,13 +19,13 @@ def trapecio():
 
 @app.route('/resulTrapecio', methods=['POST'])
 def resulTrapecio():
-    
+    funcion  = request.form.get("funcion", type=str)
     limInf   = request.form.get("limInf", type=float)
     limSup   = request.form.get("limSup", type=float)
     numIter  = request.form.get("numIter", type=int)
- ####################### AQUI VA LA FUNCION DE TRAPECIO ##############################   
+  
     def function(x):
-        return 8+4*math.cos(x)
+        return eval(funcion)
     if numIter == 2:
         h = (limSup - limInf) / 2
         integral = (function(limInf) + function(limSup))
@@ -70,12 +70,13 @@ def simpsonTercios():
 
 @app.route('/resultSimpsonTercio',methods=['POST'])
 def resultSimpsonTercio():
+    funcion  = request.form.get("funcion", type=str)
     limInf   = request.form.get("limInf", type=float)
     limSup   = request.form.get("limSup", type=float)
     numIter  = request.form.get("numIter", type=int)
-################################# AQUI VA SIMPSON 1/3 #############################
+
     def function(x):
-        return x/(4+x*x)
+        return eval(funcion)
     h = (limInf - limSup)/numIter
     k = h/3
     integral = function(limInf) + function(limSup)

@@ -12,22 +12,19 @@
             Regla del trapecio
         </h1>
         <form action={{url_for('resulTrapecio')}}  method="post" >
-            <p>
-                <section class="hero is-warning is-bold">
-                    <div class="hero-body">
-                      <div class="container">
-                        <h1 class="title">
-                          Recuerda que la función se agrega en el codigo fuente
-                        </h1> 
-                      </div>
-                    </div>
-                  </section>
-            </p>
+          <p>
+              <div class="field">
+                  <label class="label" for="funcion"> Ingresa la función </label>
+                  <div class="control">
+                    <input class="input is-rounded" type="text" name="funcion" required>
+                  </div>
+              </div>
+          </p>
             <p>
                 <div class="field">
                     <label class="label" for="limInf"> Ingresa el limite inferior </label>
                     <div class="control">
-                      <input class="input is-rounded" type="number" step="any" name="limInf">
+                      <input class="input is-rounded" type="number" step="any" name="limInf" required>
                     </div>
                 </div>
             </p>
@@ -35,7 +32,7 @@
                 <div class="field">
                     <label class="label" for="limSup"> Ingresa el limite superior </label>
                     <div class="control">
-                      <input class="input is-rounded" type="number" step="any" name="limSup">
+                      <input class="input is-rounded" type="number" step="any" name="limSup" required>
                     </div>
                 </div>
             </p>
@@ -43,7 +40,7 @@
                 <div class="field">
                     <label class="label" for="numIter"> Ingresa el número de iteraciones </label>
                     <div class="control">
-                      <input class="input is-rounded" type="number" name="numIter">
+                      <input class="input is-rounded" type="number" name="numIter" required>
                     </div>
                 </div>
             </p>
