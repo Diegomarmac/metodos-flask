@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+    <title> {{ title }} </title>
+{% endblock %}
+
+{% block body %} 
+<section class="hero is-light is-large is-bold">
+    <div class="hero-body">
+    <div class="container">
+        <h1 class="title">
+            Formula Newton
+        </h1>
+        <form action={{url_for('resultNewton')}}  method="post" >
+            <p>
+                <div class="field">
+                    <label class="label" for="gradoPoli"> ingrese el grado del Polinomio </label>
+                    <div class="control">
+                      <input class="input is-rounded" type="number" name="gradoPoli" required>
+                    </div>
+                </div>
+            </p>
+            <p>
+                <div class="field">
+                    <label class="label" for="puntoBusqueda"> ingrese el punto a buscar: </label>
+                    <div class="control">
+                      <input class="input is-rounded" type="number" step="any" name="puntoBusqueda" required>
+                    </div>
+                </div>
+            </p>
+            <p>
+                <section class="hero is-warning is-bold">
+                    <div class="hero-body">
+                      <div class="container">
+                        <h1 class="title">
+                          Los puntos de X & f(X) se agregan en el server, listo?
+                        </h1> 
+                      </div>
+                    </div>
+                  </section>
+            </p>
+           <input type="submit" value="listo" class="button is-dark is-rounded is-large"> 
+        </form>        
+    </div>
+    </div>
+</section>
+
+{% endblock %}

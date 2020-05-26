@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+    <title> {{ title }} </title>
+{% endblock %}
+
+{% block body %} 
+<section class="hero is-light is-large is-bold">
+    <div class="hero-body">
+    <div class="container">
+        <h1 class="title">
+            Spline Cubicos
+        </h1>
+        <form action={{url_for('resultCubicos')}}  method="post" >
+            <p>
+                <div class="field">
+                    <label class="label" for="tamanoListas"> Cuantos puntos hay en el spline? </label>
+                    <div class="control">
+                      <input class="input is-rounded" type="number" step="any" name="tamanoListas" required>
+                    </div>
+                </div>
+            </p>
+            <p>
+                <div class="field">
+                    <label class="label" for="efedequis"> Ingresa el punto en X a buscarse </label>
+                    <div class="control">
+                      <input class="input is-rounded" type="number" step="any" name="efedequis" required>
+                    </div>
+                </div>
+            </p>
+            <p>
+                <section class="hero is-warning is-bold">
+                    <div class="hero-body">
+                      <div class="container">
+                        <h1 class="title">
+                          Por motivos de practicidad, los puntos de X & Y se agregan en el server, listo?
+                        </h1> 
+                      </div>
+                    </div>
+                  </section>
+            </p>
+           <input type="submit" value="listo" class="button is-dark is-rounded is-large"> 
+        </form>        
+    </div>
+    </div>
+</section>
+
+{% endblock %}
