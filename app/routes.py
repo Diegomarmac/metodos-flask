@@ -52,10 +52,10 @@ def resultLagrange():
     listay = []
     n = int(input("Ingrese el valor de n+1: ")) 
     for i in range (n):
-        valor =  int(input("ingrese el valor {} de x: ".format(i)))
+        valor =  float(input("ingrese el valor {} de x: ".format(i)))
         listax.append(valor)
     for i in range (n):
-        valor =  int(input("ingrese el valor {} de y: ".format(i)))
+        valor =  float(input("ingrese el valor {} de y: ".format(i)))
         listay.append(valor)
 
     x = np.array(listax)
